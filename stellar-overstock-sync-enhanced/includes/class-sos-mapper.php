@@ -211,7 +211,7 @@ final class SOS_Mapper
             'source_url'    => '',
             'sync_enabled'  => 1,
             'profit_type'   => 'percent',
-            'profit_value'  => '0.00',
+            'profit_value'  => '20.00',
             'min_price'     => '',
             'max_price'     => '',
             'price_rounding'=> 'none',

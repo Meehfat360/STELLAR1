@@ -833,7 +833,7 @@ final class SOS_Collector
         $wpdb->insert(
             $table,
             $record,
-            ['%d', '%d', '%d', '%s', '%s', '%s', '%f', '%s', '%s', '%s', '%s', '%d', '%s', '%s', '%s']
+            ['%d', '%d', '%d', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%d', '%s', '%s', '%s']
         );
     }
 

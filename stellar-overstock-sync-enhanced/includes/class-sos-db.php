@@ -89,7 +89,7 @@ final class SOS_DB
                 source_url TEXT NOT NULL,
                 sync_enabled TINYINT(1) NOT NULL DEFAULT 1,
                 profit_type VARCHAR(30) NOT NULL DEFAULT 'percent',
-                profit_value DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+                profit_value DECIMAL(10,2) NOT NULL DEFAULT 20.00,
                 min_price DECIMAL(10,2) NULL,
                 max_price DECIMAL(10,2) NULL,
                 price_rounding VARCHAR(30) NULL,

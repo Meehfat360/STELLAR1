@@ -614,7 +614,7 @@ final class SOS_Rest_API
         $price_decimal = null;
         if ($collected_price !== null && $collected_price !== '') {
             $numeric = (float) preg_replace('/[^0-9.]/', '', (string) $collected_price);
-            $price_decimal = $numeric > 0 ? round($numeric, 2) : null;
+            $price_decimal = $numeric > 0 ? number_format($numeric, 2, '.', '') : null;
         }
 
         $allowed_stock = ['instock', 'outofstock', 'onbackorder'];
@@ -657,7 +657,7 @@ final class SOS_Rest_API
         $inserted = $wpdb->insert(
             $data_table,
             $record,
-            ['%s', '%d', '%d', '%s', '%s', '%s', '%f', '%s', '%s', '%s', '%s', '%d', '%s', '%s', '%s']
+            ['%s', '%d', '%d', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%d', '%s', '%s', '%s']
         );
 
         if (false === $inserted) {
@@ -741,7 +741,7 @@ final class SOS_Rest_API
                     'source_url'     => $source_url,
                     'sync_enabled'   => 1,
                     'profit_type'    => 'percent',
-                    'profit_value'   => '0.00',
+                    'profit_value'   => '20.00',
                     'min_price'      => null,
                     'max_price'      => null,
                     'price_rounding' => 'none',
@@ -749,7 +749,7 @@ final class SOS_Rest_API
                     'created_at'     => $now,
                     'updated_at'     => $now,
                 ],
-                ['%d', '%s', '%s', '%s', '%d', '%s', '%f', '%f', '%f', '%s', '%s', '%s', '%s']
+                ['%d', '%s', '%s', '%s', '%d', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s']
             );
 
             if (false === $inserted) {

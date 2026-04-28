@@ -571,7 +571,7 @@ final class SOS_Updater
                 'created_at'           => SOS_Utils::mysql_now_utc(),
                 'reviewed_at'          => null,
             ],
-            ['%d', '%d', '%d', '%f', '%f', '%s', '%s', '%s', '%s']
+            ['%d', '%d', '%d', '%s', '%s', '%s', '%s', '%s', '%s']
         );
     }
 
@@ -601,7 +601,7 @@ final class SOS_Updater
                 'update_error'         => $error,
                 'created_at'           => SOS_Utils::mysql_now_utc(),
             ],
-            ['%d', '%d', '%d', '%d', '%f', '%f', '%f', '%f', '%s', '%s', '%s', '%s']
+            ['%d', '%d', '%d', '%d', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s']
         );
     }
 }

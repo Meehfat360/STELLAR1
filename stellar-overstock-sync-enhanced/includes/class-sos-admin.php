@@ -532,6 +532,8 @@ final class SOS_Admin
             ['%d']
         );
 
+        // $wpdb->update() returns false on DB error, 0 when the row exists but the
+        // value is unchanged (not an error), or a positive integer on actual update.
         if (false === $result) {
             wp_send_json_error(__('Database update failed.', 'stellar-overstock-sync'));
         }
